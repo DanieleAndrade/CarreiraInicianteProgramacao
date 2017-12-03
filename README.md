@@ -1,0 +1,1 @@
+Repositório para guardar atividades propostas pelo curso Lógica de Programação da Caelum.
