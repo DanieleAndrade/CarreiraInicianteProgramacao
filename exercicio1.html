@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+    <input/>
+    <button>Exibir texto digitado</button>
+
+<script>
+
+    var input = document.querySelector("input");
+
+    function exibeTexto(){
+
+        alert(input.value);
+    }
+
+    input.value = "";
+    input.focus();
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+</script>   
