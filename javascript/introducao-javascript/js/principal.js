@@ -22,14 +22,14 @@ for(var i = 0; i < pacientes.length; i++) {
         console.log("peso invalido");
         pesoValido = false;
         tdImc.textContent = "Pesso inválido";
-        paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-invalido");
     }
 
     if(altura <= 0 || altura >= 3.00){
         console.log("altura inválida");
         alturaValida = false;
         tdImc.textContent = "Altura inválida";
-        paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-invalido");
     }
     //Adicionando o IMC a tabela
     if(pesoValido && alturaValida) {
