@@ -39,13 +39,14 @@ for(var i = 0; i < pacientes.length; i++) {
 
 }
 
-titulo.addEventListener("click", function(){
-    console.log("eu sou uma função anônima");
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+console.log(botaoAdicionar);
+
+botaoAdicionar.addEventListener("click", function(){
+    console.log("cliquei no botão");
 });
 
-function mostraMsg() {
-    console.log("Olá fui clicado");
-}
+
 
    
 
