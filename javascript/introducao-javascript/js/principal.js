@@ -39,5 +39,13 @@ for(var i = 0; i < pacientes.length; i++) {
 
 }
 
+titulo.addEventListener("click", function(){
+    console.log("eu sou uma função anônima");
+});
+
+function mostraMsg() {
+    console.log("Olá fui clicado");
+}
+
    
 
