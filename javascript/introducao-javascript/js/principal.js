@@ -44,7 +44,10 @@ console.log(botaoAdicionar);
 
 botaoAdicionar.addEventListener("click", function(event){
     event.preventDefault();
-    console.log("cliquei no botão");
+    
+    var form = document.querySelector("#form-adiciona");
+    console.log(form.altura.value);
+    console.log(form.peso.value);
 });
 
 
