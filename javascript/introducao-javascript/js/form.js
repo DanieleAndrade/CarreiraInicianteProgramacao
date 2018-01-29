@@ -41,10 +41,10 @@ function obtemPacienteDoFormulario(form){
 
     var paciente = {
 
-        nome = form.nome.value,
-        altura = form.altura.value,
-        peso = form.peso.value,
-        gordura = form.gordura.value,
-        imc = calculaImc(form.altura.value, form.peso.value)
+        nome: form.nome.value,
+        altura: form.altura.value,
+        peso: form.peso.value,
+        gordura: form.gordura.value,
+        imc: calculaImc(form.altura.value, form.peso.value)
     }
 }
