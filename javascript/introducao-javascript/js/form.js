@@ -17,6 +17,8 @@ botaoAdicionar.addEventListener("click", function(event){
 
     tabela.appendChild(pacienteTr);
 
+    form.reset();
+
     console.log(form.altura.value);
     console.log(form.peso.value);
 });
@@ -40,17 +42,11 @@ function montaTr(paciente){
     var pacienteTr = document.createElement("tr");
     pacienteTr.classList.add("paciente");
 
-    var nomeTd = montaTd(paciente.nome, "info-nome");
-    var pesoTd = montaTd(paciente.pesoTd, "info-peso");
-    var alturaTd = montaTd(paciente.alturaTd, "info-altura");
-    var gorduraTd = montaTd(paciente.gordura, "info-gordura");
-    var imcTd = montaTd(paciente.imc, "info-imc");
-
-    pacienteTr.appendChild(nomeTd);
-    pacienteTr.appendChild(pesoTd);
-    pacienteTr.appendChild(alturaTd);
-    pacienteTr.appendChild(gorduraTd);
-    pacienteTr.appendChild(imcTd);
+    pacienteTr.appendChild(montaTd(paciente.nome, "info-nome"));
+    pacienteTr.appendChild(montaTd(paciente.pesoTd, "info-peso"));
+    pacienteTr.appendChild(montaTd(paciente.alturaTd, "info-altura"));
+    pacienteTr.appendChild(montaTd(paciente.gordura, "info-gordura"));
+    pacienteTr.appendChild(montaTd(paciente.imc, "info-imc"));
 }
 
 function montaTd(dado, classe){
