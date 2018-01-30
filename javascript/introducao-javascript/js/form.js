@@ -14,6 +14,7 @@ botaoAdicionar.addEventListener("click", function(event){
 
     if(!validaPaciente(paciente)){
         console.log("Paciente inválido");
+        return;
     }
 
     //adicionando o paciente na tabela
