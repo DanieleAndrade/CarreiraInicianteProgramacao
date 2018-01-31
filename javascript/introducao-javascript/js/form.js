@@ -12,16 +12,12 @@ botaoAdicionar.addEventListener("click", function(event){
     //criar a tr e td do paciente
     var pacienteTr = montaTr(paciente);
 
-    if(erro.length > 0){
-        var mensagemErro = document.querySelector("#mensagem-erro");
-        mensagemErro.textContent = erros;
+    var erros = validaPacientes(paciente);
+    console.log(erros);
+    if(erros.length > 0){
+        exibeMensagensDeErro(erros);
         return;
-    }
-
-    if(!validaPaciente(paciente)){
-        console.log("Paciente inválido");
-        return;
-    }
+}
 
     //adicionando o paciente na tabela
     var tabela = document.querySelector("#tabela-paciente");
@@ -33,6 +29,15 @@ botaoAdicionar.addEventListener("click", function(event){
     console.log(form.altura.value);
     console.log(form.peso.value);
 });
+
+function exibeMensagemDeErro(erros){
+    var ul = document.querySelector("#mensagens-erro");
+    erros.forEach(function(erro){
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+}
 
 function obtemPacienteDoFormulario(form){
 
