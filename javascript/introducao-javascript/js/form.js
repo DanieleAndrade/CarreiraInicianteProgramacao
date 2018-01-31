@@ -14,7 +14,7 @@ botaoAdicionar.addEventListener("click", function(event){
 
     if(erro.length > 0){
         var mensagemErro = document.querySelector("#mensagem-erro");
-        mensagemErro.textContent = erro;
+        mensagemErro.textContent = erros;
         return;
     }
 
@@ -70,9 +70,18 @@ function montaTd(dado, classe){
 }
 
 function validaPaciente(paciente) {
-    if(validaPeso(paciente.peso)){
-        return true;
+
+    var erros = [];
+
+    if(!validaPeso(paciente.peso)){
     } else {
-        return "Peso é inválido";
+        erros.push("Peso é inválido");
     }
+
+    if(!validaAltura(paciente.altura)){
+    } else {
+        erros.push("Altura é inválida");
+    }
+
+    return erros;
 }
