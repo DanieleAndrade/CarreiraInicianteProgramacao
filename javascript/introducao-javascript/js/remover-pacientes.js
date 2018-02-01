@@ -9,8 +9,3 @@ tabela.addEventListener("dbclick", function (event) {
         event.target.parentNode.remove();
     }, 500);
 });
-/*pacientes.forEach(function (paciente) {
-    paciente.addEventListener("dbclick", function () {
-        this.remove();
-    });
-}); */
