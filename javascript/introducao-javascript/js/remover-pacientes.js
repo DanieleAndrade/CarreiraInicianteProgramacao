@@ -3,6 +3,7 @@ var pacientes = document.querySelector(".paciente");
 var tabela = document.querySelector("table");
 
 tabela.addEventListener("dbclick", function (event) {
+    event.target.parentNode.classList.add("fadeOut")
     event.target.parentNode.remove();
 });
 /*pacientes.forEach(function (paciente) {
