@@ -5,6 +5,10 @@ campoFiltro.addEventListener("input", function () {
     if (this.value.length > 0) {
         for (var i = 0; i < pacientes.length; i++) {
             var paciente = pacientes[i];
+
+            var tdNome = paciente.querySelector(".info-nome");
+            var nome = tdNome.textContent;
+
             paciente.classList.add("invisivel");
         }
     } else {
